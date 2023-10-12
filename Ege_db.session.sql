@@ -1,1 +1,0 @@
-SELECT * FROM ege_online_school.grades

@@ -1,9 +1,0 @@
-f = open('Pasha/24_2024.txt').read()
-s = ''
-maxlen = -100000
-for i in range(len(f)):
-    s += f[i]
-    if s.count('T') == 101:
-        maxlen = max(maxlen, len(s) - 1)
-        s = s[s.index('T')+1:]
-print(maxlen)
