@@ -1,18 +1,13 @@
-f = open("Igor/9/10091.txt").readlines()
+f = open('ItEge/Igor/9/92424.txt')
 cnt = 0
-for i in f:
-    my_numbers = [int(x) for x in i[:-1].split()]
-    cntPairs = 0
-    flag = True
-    sredPovt = 0
-    for j in set(my_numbers):
-        if my_numbers.count(j) == 2:
-            cntPairs += 1
-            sredPovt += j
-        elif my_numbers.count(j) > 2:
-            flag = False
-            break
-    if cntPairs == 2 and flag:
-        if sredPovt/2 < (sum(my_numbers)/7):
-            cnt += 1
+for s in f:
+    sum_povt = 0
+    my_numbers = sorted(list(map(int, (s.split()))))
+    if my_numbers[0] != my_numbers[1]:
+        if len(set(my_numbers)) != len(my_numbers):
+            for i in set(my_numbers):
+                if my_numbers.count(i) > 1:
+                    sum_povt += i*my_numbers.count(i)
+    if my_numbers[0]+my_numbers[-1] < sum_povt:
+        cnt += 1
 print(cnt)
