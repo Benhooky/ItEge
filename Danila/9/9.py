@@ -1,10 +1,16 @@
-f = open("Danila/9/09_9156.txt")
+f = open('ItEge/Danila/9/41212.txt')
 cnt = 0
-for my_str in f.readlines():
-    my_str = my_str[:-1].split("\t")
-    my_list = [int(x) for x in my_str]
-    my_list.sort()
-    if (my_list[0]+my_list[3]) % 3 == 0:
-        if (my_list[3]-my_list[2] == my_list[1]-my_list[0]) or (my_list[3]-my_list[1] == my_list[2]-my_list[0]):
-            cnt += 1
-print(cnt)
+for i in f:
+    cnt += 1
+    my_numbers = sorted(int(x) for x in i.split())
+    if len(set(my_numbers)) == 5:
+        sum_nepov = 0
+        povt = 0
+        for j in set(my_numbers):
+            if my_numbers.count(j) > 1:
+                povt = j
+            else:
+                sum_nepov += j
+        if povt >= sum_nepov / 4:
+            print(cnt)
+            break
