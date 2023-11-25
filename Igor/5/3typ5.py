@@ -1,8 +1,18 @@
-for n in range(2, 1000):
-    i = bin(n)[2:]  # 10
-    digits_to_add = i[1] * 2  # 00
-    i = i[:-1] + digits_to_add  # 100
-    r = int(i, 2)
-    if r > 92:
+def tre(x):
+    s = ""
+    while x > 0:
+        s = str(x % 3) + s
+        x //= 3
+    return s
+
+
+for n in range(1000, 1, -1):
+    s = tre(n)
+    if sum(list(map(int, s))) % 3 == 0:
+        s = "20" + s
+    else:
+        s = "10" + s
+    r = int(s, 3)
+    if r < 100:
         print(n)
         break
