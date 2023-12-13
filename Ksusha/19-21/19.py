@@ -1,28 +1,28 @@
-def F(first, second, turn):
-    if (first + second >= 342) and turn == 2:
-        return True
-    elif (first + second >= 342) and turn != 2:
-        return False
+def f(first, second, turn):
+    if first + second <= 20:
+        if turn == 2:
+            return True
+        else:
+            return False
     elif turn > 2:
         return False
     else:
-        if turn % 2 == 0:
+        if turn % 2 == 0:  # peta
             return (
-                F(first * 5, second, turn + 1)
-                or F(first, second * 5, turn + 1)
-                or F(first + 2, second, turn + 1)
-                or F(first, second + 2, turn + 1)
+                (f(first, second - 1, turn + 1))
+                or (f(first, second // 2, turn + 1))
+                or (f(first - 1, second, turn + 1))
+                or (f(first // 2, second, turn + 1))
             )
-        else:
+        else:  # vana
             return (
-                F(first * 5, second, turn + 1)
-                or F(first, second * 5, turn + 1)
-                or F(first + 2, second, turn + 1)
-                or F(first, second + 2, turn + 1)
+                f(first - 1, second, turn + 1)
+                or f(first // 2, second, turn + 1)
+                or f(first, second - 1, turn + 1)
+                or f(first, second // 2, turn + 1)
             )
 
 
-for S in range(1, 326):
-    if F(11, S, 0):
-        print(S)
-        break
+for s in range(10, 100):
+    if f(10, s, 0):
+        print(s)
