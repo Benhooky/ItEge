@@ -1,10 +1,9 @@
-count = 0
-for i in range(1000000, 10000000):
-    octal = oct(i)[2:]
-    if '3' not in octal:
-        for d in range(6):
-            if int(octal[d]) % 2 == 0 and int(octal[d+1]) % 2 == 0:
-                count += 1
-                break
-
-print(count)
+cnt = 0
+from itertools import permutations
+a = permutations('0124567',6)
+list1 = ["".join(i) for i in a]
+GOOD = ["".join(i) for i in permutations('0246',2)]
+for i in list1:
+    if any(x in i for x in GOOD) and i[0]!='0':
+        cnt +=1
+print(cnt)

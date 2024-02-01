@@ -9,4 +9,3 @@ for n in range(100000):
     if r <= 170:
         maxR = max(maxR, r)
 print(maxR)
-        
