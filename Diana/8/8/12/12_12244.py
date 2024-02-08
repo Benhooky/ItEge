@@ -1,6 +1,5 @@
 summax=0
 for n in range (4,10000):
-    
     s= "3"+"5"*n
     while "333" in s or "555" in s :
         if "555" in s:
