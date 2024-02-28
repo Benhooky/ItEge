@@ -1,5 +1,5 @@
 maxLen = 0
-for n in range(999,3,-1):
+for n in range(999, 3,-1):
     s = '1'+n*'2'
     while '12' in s or '322' in s or '222' in s:
         if '12' in s:
