@@ -6,6 +6,5 @@ for i in f:
     if keeperS.count('INFINITY')==1001:
         maxLen = max(maxLen,len(keeperS)-1)
         keeperS = keeperS[keeperS.index('INFINITY')+1:]
-maxLen = max(maxLen,len(keeperS)-1)
-keeperS = keeperS[keeperS.index('INFINITY')+1:]
+maxLen = max(maxLen,len(keeperS))
 print(maxLen)
