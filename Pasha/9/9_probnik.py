@@ -7,7 +7,7 @@ for dictIndex, currentDict in enumerate(lisOfDict):#5 проходов
         if i not in currentDict.keys():
             currentDict[i] = listOfColums[dictIndex].count(i)
 answer = 0
-for number,j in  enumerate(lis,1):
+for number,j in enumerate(lis,1):
     cntOk = 0
     cntSame = 0
     for l in range(len(j)):
