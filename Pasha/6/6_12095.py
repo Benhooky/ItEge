@@ -1,7 +1,7 @@
 from turtle import *
 tracer(0)
 left(90)
-k = 80
+k = 30
 for i in range(12):
     forward(4 * k)
     right(144)

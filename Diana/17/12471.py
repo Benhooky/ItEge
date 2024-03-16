@@ -1,4 +1,4 @@
-f = open('ItEge/Diana/17/17_12471 (1).txt')
+f = open('ItEge/Diana/17/17_12471 (4).txt')
 lis = [int(x) for x in f]
 max13 = 0
 c=0
