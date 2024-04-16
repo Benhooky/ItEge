@@ -1,10 +1,9 @@
-from string import digits, ascii_uppercase
-alph = digits+ascii_uppercase
+
 f = 3*3125**9+2*625**8-4*625**7+3*125**6-2*25**5-2024
 d = 25
-s = ''
+cnt = 0
 while f>0:
-    s = alph[f%d] + s
+    if f%d > 9:
+        cnt+=1
     f//=d
-print(s.count('0'))
-print(s)
+print(cnt)
