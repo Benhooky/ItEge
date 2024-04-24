@@ -1,5 +1,7 @@
+from functools import cache
 import sys
 sys.setrecursionlimit(10000)
+@cache
 def F(n):
     if n<52:
         return n
