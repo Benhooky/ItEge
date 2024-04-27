@@ -8,7 +8,6 @@ def d(n):
         c+=1
     return c
 for i in range(62916,10**9,62916):
-    i = 53831655
     if fnmatch(str(i),"*31*65?"):
         for x in range(1000):
             if 2**x==d(i):
