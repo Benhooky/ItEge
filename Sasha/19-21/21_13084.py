@@ -9,7 +9,7 @@ def f(first,turn):
     else:
         if turn%2==0:
             if first%2==0:
-                return f(first+1,turn+1) and f(first*1.5,turn+1)
+                return f(first+1,turn+1,'+1') and f(first*1.5,turn+1)
             else:
                 return f(first+1,turn+1) and f(first*2,turn+1)
         else:
