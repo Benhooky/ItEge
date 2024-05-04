@@ -1,4 +1,4 @@
-for n in range(4, 1000):
+for n in range(4, 10000):
     s = "2" + "5" * n
     while ("25" in s) or ("35" in s) or ("555" in s):
         if "25" in s:
@@ -10,8 +10,6 @@ for n in range(4, 1000):
     sum_s = 0
     for l in s:
         sum_s += int(l)
-        if sum_s > 7:
-            break
     if sum_s % 7 == 0:
         print(n)
         break

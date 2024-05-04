@@ -1,3 +1,5 @@
+lastN = 0
+maxS = 0
 for n in range(100, 9, -1):
     s = "13" * n
     while ("13" in s) or ("31" in s) or ("11" in s):
@@ -12,7 +14,9 @@ for n in range(100, 9, -1):
     sum_s = 0
     for l in s:
         sum_s += int(l)
-    if sum_s > 9:
-        print(n)
-        break
+    if 9<sum_s<100:
+        if maxS < sum_s:
+            maxS = sum_s
+            lastN = n
+print(lastN)
 
