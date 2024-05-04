@@ -8,4 +8,6 @@ for lst in f:
     cntUsl = sum(1 for x in usl if x)
     if cntUsl == 1:
         cnt+=1
+    #if first ^ second:
+        #cnt+=1
 print(cnt)
