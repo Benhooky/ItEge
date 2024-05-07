@@ -7,6 +7,6 @@ for n in range(3,10001):
             s= s.replace("411","13",1)
         if "1111" in s:
             s=s.replace("1111","4",1)
-        s=map(int,s)
-        if sum(s) == 34:
-            print(n)
+    s=map(int,s)
+    if sum(s) == 34:
+        print(n)

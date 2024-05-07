@@ -9,8 +9,8 @@ def f(first,turn):
     else:
         if turn%2==0: #P
             return (
-                f(first+1,turn+1) or
-                f(first+5,turn+1) or 
+                f(first+1,turn+1) and
+                f(first+5,turn+1) and 
                 f(first*4,turn+1) 
             )
         else: #V

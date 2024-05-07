@@ -1,7 +1,7 @@
 def four(x):
     y=""
     while x>0:
-        y += str(x%4) 
+        y  = str(x%4) + y 
         x//=4
     return y
 for n in range(1,1001):

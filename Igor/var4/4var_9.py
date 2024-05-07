@@ -1,4 +1,4 @@
-f = open("probnik/9.txt")
+f = open("ItEge/Igor/var4/9.txt")
 max1=0
 cnt=0
 for e in f:
@@ -15,7 +15,7 @@ for e in f:
             cnt4+=1
             avgPovt4=i
         if my_num.count(i)==2:
-            cnt2+=2
+            cnt2+=1
             avgPovt2=i
         if my_num.count(i)==1:
             cnt1+=1
