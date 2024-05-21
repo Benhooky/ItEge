@@ -10,5 +10,3 @@ def F(n):
 for i in range(171):
     F(i)
 print(F(170))
-
-

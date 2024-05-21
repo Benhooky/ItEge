@@ -5,7 +5,6 @@ def troy(n):
         n //= 3
     return troy
 
-
 for n in range(1, 10000):
     s = troy(n)
     summa = troy(s.count("1") + s.count("2") * 2)

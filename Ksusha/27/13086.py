@@ -1,11 +1,11 @@
-f = open('ItEge/Ksusha/27/27-A_13102 (2).txt')
-K = int(f.readline())
-N = int(f.readline())
-maxSum = -100000000
-lis = [int(i) for i in f]
-for i in range(len(lis)-2):
-    for j in range(i+1,len(lis)-1):
-        for k in range(j+1,len(lis)):
-            if (j-i>=2*K) or (k-j>=2*K) or (k-i>=2*K):
-                maxSum = max(maxSum,lis[i]+lis[j]+lis[k])
-print(maxSum)
+f = open('ItEge/Ksusha/27/27-A_13086 (1).txt')
+cnt=0
+answer=[]
+k=int(f.readline())
+N=int(f.readline())
+lst=[int(i) for i in f]
+for x1 in range(N-2*k):
+    for x3 in range(x1+2*k,N):
+        for x2 in range(x1+1,x3):
+            answer.append(lst[x1]+lst[x2]+lst[x3])
+print(max(answer))
