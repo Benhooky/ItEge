@@ -1,5 +1,3 @@
-b = [x for x in range(101, 144)]
-c = [x for x in range(144, 200)]
 mx = -10000000000000000
 for al in range(1, 250):
     for ar in range(250,al,-1 ):
