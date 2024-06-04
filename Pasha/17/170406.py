@@ -11,7 +11,7 @@ for i in spis:
         mn = min(mn, i)
 for j in range(len(spis) - 2):
     timeSpis = [spis[j], spis[j + 1], spis[j + 2]]
-    if all(thr(l) for l in timeSpis):
+    if sum(1 for l in timeSpis if thr(l))==2:
         if sum(timeSpis) > mn:
             cnt += 1
             sm = max(sm, sum(timeSpis))
