@@ -1,5 +1,7 @@
 from turtle import *
-k = 13
+k = 40
+screensize(10000, 10000)
+tracer(0)
 up()
 goto(-28*k,32*k)
 down()
