@@ -1,5 +1,5 @@
-from functools import lru_cache
-@lru_cache
+from functools import cache
+@cache
 def f(n):
     if n>3456:
         return n+1
