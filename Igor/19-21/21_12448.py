@@ -1,6 +1,6 @@
 def f(first, second, turn):
     if first * second >= 777:
-        if turn == 2 or turn == 4:
+        if turn == 2 :
             return True
         else:
             return False

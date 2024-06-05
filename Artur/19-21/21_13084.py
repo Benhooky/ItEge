@@ -1,6 +1,6 @@
 def f(first,turn):
     if first>=84:
-        if turn == 2 or turn == 4:
+        if turn == 2:
             return True
         else:
             return False
