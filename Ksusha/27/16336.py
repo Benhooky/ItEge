@@ -7,7 +7,7 @@ for i in range(n):
     for j in range(1,len(patrol)//2):
         sum1+=patrol[j]*j+patrol[-j]*j
     if len(patrol)%2==0:
-        sum1+=patrol[len(patrol[1:])//2+1]*len(patrol[1:])//2
+        sum1+=patrol[len(patrol[1:])//2+1]*(len(patrol[1:])//2+1)
     
     d.rotate(-1)
     
