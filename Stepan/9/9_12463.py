@@ -1,7 +1,10 @@
 f = open('ItEge/Stepan/9/9_12463.txt')
 arr = [sorted(list(map(int,x.split()))) for x in f]
 cnt = 0
+number = 0
+sum1 = 0
 for line in arr:
+    number+=1
     cnt2 = 0
     cnt4 = 0
     cnt1 = 0
@@ -19,5 +22,5 @@ for line in arr:
             maxPovt = max(maxPovt,x)
     if cnt1==3 and cnt2==1 and cnt4==1:
         if avg1/3>=maxPovt:
-            cnt+=1
+            sum1+=number
 print(cnt)
