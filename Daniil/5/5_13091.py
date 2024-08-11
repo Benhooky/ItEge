@@ -6,3 +6,7 @@ for N in range(1,1000):
     if R>20:
         minR = min(minR,R)
 print(minR)
+
+
+d = {1:'4234',2:'42334'}
+print(d[1])
