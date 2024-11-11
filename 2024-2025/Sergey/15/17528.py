@@ -1,6 +1,6 @@
 minlen=10000000
-for Aleft in range(15,64):
-    for Aright in range (Aleft+1,65):
+for Aleft in range(100):
+    for Aright in range (Aleft+1,100):
         flag=True
         for x in range (30,130):
             x/=2 
