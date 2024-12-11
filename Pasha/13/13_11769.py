@@ -1,5 +1,4 @@
 from ipaddress import *
-
 ip = ip_address("157.17.164.129")
 net = ip_address("157.17.128.0")
 for mask in range(16, 33):
