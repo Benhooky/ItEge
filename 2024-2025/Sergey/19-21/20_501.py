@@ -1,0 +1,16 @@
+def f(first,second,turn):
+    if first>=21 or second>=21:
+        if turn==4 or turn==6:
+            return True
+        else:
+            return False
+    if turn>6:
+        return False
+    if turn%2!=0: # Ваня
+        return f(first+3,second,turn+1) or f(first,second+3,turn+1) or f(first*2,second,turn+1) or f(first,second*2,turn+1)
+    else: # Петя
+        return f(first+3,second,turn+1) and f(first,second+3,turn+1) and f(first*2,second,turn+1) and f(first,second*2,turn+1)
+
+for S in range(1,20):
+    if f(4,S,0):
+        print(S)
